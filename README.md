@@ -8,7 +8,7 @@ The plan is to add more functionality so you are able to add i18n in an easy way
 
 Simply add this package to your project.
 ```
-meteor add timoruetten:flow-router-i18n
+meteor add timoruetten:flow-router-ssr-i18n
 ```
 
 This package depends on these two packages:
@@ -22,7 +22,7 @@ This package depends on these two packages:
 Currently there is no configuration possible.
 
 ## 3. Use Package
-This Package will give you access to two global variables which are accessable on client and server. 
+This Package will give you access to two global variables which are accessable on client and server.
 
 ```
 FlowRouterI18n;

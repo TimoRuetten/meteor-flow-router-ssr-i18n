@@ -1,6 +1,6 @@
 Package.describe({
   name: 'timoruetten:flow-router-ssr-i18n',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Simple solution for i18n prefixes in FlowRouter SSR routes.',
   git: 'https://github.com/TimoRuetten/meteor-flow-router-ssr-i18n',
   documentation: 'README.md'
