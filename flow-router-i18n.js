@@ -40,6 +40,29 @@ const FlowRouterI18nHandle = class {
     });
 
     this._language = null;
+
+    /**
+    * We need to manipulate the params object with langCode.
+    * FlowRouter.go()
+    * FlowRouter.path()
+    * FlowRouter.url()
+    ** Todo: Only assign this when the pathDef is in this group
+    */
+    const flowrouterMethods = ['go', 'path', 'url'];
+    const self = this;
+    flowrouterMethods.map((methodName) => {
+      if (!FlowRouter[methodName]) return;
+      let _method = FlowRouter[methodName];
+      FlowRouter[methodName] = function (pathDef, params, query) {
+        //if (FlowRouter._routes[pathDef].group == self.settings.name) {
+          // Todo: parent group
+        //}
+        params = Object.assign({
+          langCode: self.getLanguage()
+        }, params);
+        _method(pathDef, params, query);
+      };
+    });
   }
 
   getLanguage() {
