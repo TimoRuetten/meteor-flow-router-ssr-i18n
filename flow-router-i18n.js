@@ -51,6 +51,13 @@ const FlowRouterI18nHandle = class {
     FlowRouter.setParams({langCode});
   }
 
+  // Temporaly helper methods
+  go(pathDef, params, query) {
+    FlowRouter.go(pathDef, Object.assign({
+      langCode: this.getLanguage()
+    }, params), query);
+  }
+
 };
 
 export const FlowRouterI18n = new FlowRouterI18nHandle();
