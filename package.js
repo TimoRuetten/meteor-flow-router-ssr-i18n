@@ -1,6 +1,6 @@
 Package.describe({
   name: 'timoruetten:flow-router-ssr-i18n',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'Simple solution for i18n prefixes in FlowRouter SSR routes.',
   git: 'https://github.com/TimoRuetten/meteor-flow-router-ssr-i18n',
   documentation: 'README.md'
@@ -15,11 +15,6 @@ Package.onUse(function(api) {
   api.use('kadira:flow-router-ssr@3.12.2');
   api.use('tap:i18n@1.8.0');
   api.mainModule('flow-router-i18n.js');
-
-  api.export([
-    'FlowRouterI18n',
-    'FlowRouterI18nGroup'
-  ], ['client', 'server']);
 });
 
 Package.onTest(function(api) {

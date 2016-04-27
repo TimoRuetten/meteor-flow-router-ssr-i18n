@@ -54,7 +54,7 @@ const FlowRouterI18nHandle = class {
 };
 
 FlowRouterI18n = new FlowRouterI18nHandle();
-FlowRouterI18nGroup = FlowRouterI18n._i18nGroup;
+export const FlowRouterI18nGroup = FlowRouterI18n._i18nGroup;
 
   if (Meteor.isClient) {
     Tracker.autorun(function(){
