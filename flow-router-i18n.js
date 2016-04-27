@@ -53,7 +53,7 @@ const FlowRouterI18nHandle = class {
 
 };
 
-FlowRouterI18n = new FlowRouterI18nHandle();
+export const FlowRouterI18n = new FlowRouterI18nHandle();
 export const FlowRouterI18nGroup = FlowRouterI18n._i18nGroup;
 
   if (Meteor.isClient) {
