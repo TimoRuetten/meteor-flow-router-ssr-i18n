@@ -30,7 +30,7 @@ FlowRouterI18nGroup;
 
 ```
 
-Use ```FlowRouterI18nGroup``` to create new routes. Repeat with this variable your ```FlowRouter``` variable.
+Use ```FlowRouterI18nGroup``` to create new routes. Use this instead of ```FlowRouter``` when you need the langCode prefix.
 
 Example:
 

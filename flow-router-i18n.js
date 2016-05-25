@@ -65,8 +65,7 @@ const FlowRouterI18nHandle = class {
 
   getLanguage() {
     if (Meteor.isClient) return TAPi18n.getLanguage();
-    if (this._language) return this._language;
-    return null;
+    return FlowRouter.getParam('langCode') || TAPi18n._fallback_language;
   }
   setLanguage(langCode) {
     FlowRouter.setParams({langCode});
